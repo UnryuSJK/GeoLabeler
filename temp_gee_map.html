@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_2543ee66ca306c000e7acd3dd46bd3a4 {
+                #map_d67659d429a6d555b7de9ba248979b2d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,19 +54,19 @@
 <body>
     
     
-            <div class="folium-map" id="map_2543ee66ca306c000e7acd3dd46bd3a4" ></div>
+            <div class="folium-map" id="map_d67659d429a6d555b7de9ba248979b2d" ></div>
         
 </body>
 <script>
     
     
-            var map_2543ee66ca306c000e7acd3dd46bd3a4 = L.map(
-                "map_2543ee66ca306c000e7acd3dd46bd3a4",
+            var map_d67659d429a6d555b7de9ba248979b2d = L.map(
+                "map_d67659d429a6d555b7de9ba248979b2d",
                 {
-                    center: [38.043877444423174, 118.85155958463461],
+                    center: [37.61448384938056, 118.6554572385062],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 10,
+  "zoom": 18,
   "zoomControl": false,
   "preferCanvas": false,
 }
@@ -78,7 +78,7 @@
 
         
     
-            var tile_layer_bffa4fc931b03d72d2c28dc97883de11 = L.tileLayer(
+            var tile_layer_602cf6ed4d5a21c2f701d5acb2ae0790 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -95,7 +95,28 @@
             );
         
     
-            tile_layer_bffa4fc931b03d72d2c28dc97883de11.addTo(map_2543ee66ca306c000e7acd3dd46bd3a4);
+            tile_layer_602cf6ed4d5a21c2f701d5acb2ae0790.addTo(map_d67659d429a6d555b7de9ba248979b2d);
         
+    
+            var marker_79d96251efde73942d9e4de74579d3fb = L.marker(
+                [37.61448384938056, 118.6554572385062],
+                {
+}
+            ).addTo(map_d67659d429a6d555b7de9ba248979b2d);
+        
+    
+            var icon_a99a153f0a397efd5f86facd431d2f42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+                marker_79d96251efde73942d9e4de74579d3fb.setIcon(icon_a99a153f0a397efd5f86facd431d2f42);
+            
 </script>
 </html>

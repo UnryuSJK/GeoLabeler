@@ -181,7 +181,7 @@ class MainWindow(QMainWindow):
         path, _ = QFileDialog.getOpenFileName(self, "Select SHP", "", "Shapefile (*.shp)")
         if path:
             QApplication.setOverrideCursor(Qt.WaitCursor)
-            self.chart_view.show_message("⌛ Processing 60k+ points...")
+            self.chart_view.show_message("⌛ Processing points...")
             QApplication.processEvents()
 
             try:
