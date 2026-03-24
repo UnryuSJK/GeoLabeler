@@ -16,8 +16,18 @@ class FastGeomModel(QAbstractTableModel):
     def __init__(self, gdf, main_window=None):
         super().__init__()
         self._gdf = gdf
-        self._cols = [c for c in gdf.columns if c != 'geometry']
         self.main_window = main_window  # 传入窗口引用，方便修改标题
+        # --- 重排列顺序 ---
+        all_cols = [c for c in gdf.columns if c != 'geometry']
+
+        # 如果列中包含 u_label，则将其移动到最前面
+        target_col = 'u_label'
+        if target_col in all_cols:
+            all_cols.remove(target_col)
+            all_cols.insert(0, target_col)
+
+        self._cols = all_cols
+        # -----------------------
 
     def rowCount(self, parent=None):
         return len(self._gdf)
